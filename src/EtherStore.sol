@@ -1,7 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
+
 contract EtherStore {
+    bool internal locked;
     mapping(address => uint) public balances;
+
+    modifier noReentrant() {
+        require(!locked, "No re-entrancy");
+        locked = true;
+        _;
+        locked = false;
+    }
 
     function deposit() public payable {
         balances[msg.sender] += msg.value;
