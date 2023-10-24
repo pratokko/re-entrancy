@@ -1,5 +1,5 @@
  ## Re-Entrancy
-
+This is one of the common exploits in smart contracts
  in our contract EtherStore is a contract where you can deposit and withdraw ETH.
  this contract is  vulnerable to re-entrancy attack lets see why
 
