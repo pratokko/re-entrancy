@@ -22,3 +22,5 @@ This is one of the common exploits in smart contracts
 - Attack fallback (receives 1 Ether)
 
 - This can be improved further using selfdestruct so that after the exploit the  contract is deleted then the money is transferred to the msg.sender
+
+- Learn how this works by testing this code on Remix
